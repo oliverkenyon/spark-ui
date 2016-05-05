@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GitHub visualization with Spark</title>
+</head>
+<style>
+
+text {
+  font: 14px sans-serif;
+}
+
+.bar {
+  fill: orange;
+}
+
+.falling-bar {
+    fill: orangered;
+}
+
+.bar:hover {
+  fill: orangered ;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+</style>
+
+<body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/d3/d3.js"></script>
+<script type="text/javascript" src="bower_components/d3-tip/index.js"></script>
+<script type="text/javascript" src="dist/rollup-bundle.js"></script>
+
+<p>Language Graph</p>
+<div id="bar-graph"></div>
+
+<p>Commit Stack</p>
+<div id="commit-stack"></div>
+
+<p>Commit Bubbles</p>
+<div id="commit-bubbles"></div>
+</body>
+</html>

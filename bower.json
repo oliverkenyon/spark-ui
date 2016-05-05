@@ -1,0 +1,22 @@
+{
+  "name": "spark",
+  "description": "GitHub Data Visualization with Spark",
+  "main": "index.html",
+  "authors": [
+    "Oliver Kenyon <okenyon@scottlogic.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+	"d3": "~3.5.5",
+    "d3-tip": "^0.6.7"
+  }
+}
