@@ -1,12 +1,12 @@
 ## Initial Build
 
-cgywin, cd into directory
-./build.sh
+1. cgywin, cd into directory
+2. ./build.sh
 
 ## Rebundle after making changes
 
-cgywin, cd into directory
-./node_modules/rollup/bin/rollup -c
+1. cgywin, cd into directory
+2. ./node_modules/rollup/bin/rollup -c
 
 ## Configuration
 
