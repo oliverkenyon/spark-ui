@@ -11,7 +11,7 @@ var uiHandler = null;
 $(function () {
     window.WebSocket = window.WebSocket || window.MozWebSocket;
 
-    var baseURL = "http://localhost:9021/"
+    var baseURL = "http://192.168.99.100:9022/"
 
     var languageGraph = new LanguageGraph(d3.select("#bar-graph"), 960, 500, baseURL + "files?limit=30");
     languageGraph.initialize();
@@ -23,4 +23,5 @@ $(function () {
     var bubbleGraph = new BubbleGraph(d3.select("#commit-bubbles"), 960, 300, 1, bubbleGraphDataStreamer);
 
     uiHandler = new UIHandler(languageGraph, commitStack, bubbleGraph);
+
 });
