@@ -5,11 +5,15 @@ RUN apk add --update bash
 
 EXPOSE 8080
 
-COPY bower_components /app/bower_components
+COPY package.json /app/
+COPY bower.json /app/
+COPY rollup.config.js /app/
+COPY src/ /app/src/
 COPY index.html /app/
-COPY dist /app/dist
 
 WORKDIR /app
-RUN /usr/bin/npm install http-server
+RUN npm set progress=false; npm install; npm run build
+RUN npm install http-server
+RUN rm -rf src/
 
 ENTRYPOINT ["./node_modules/http-server/bin/http-server", "."]
