@@ -3,6 +3,8 @@
 import CommitStack from "./visualizations/CommitStack";
 import BubbleGraph from "./visualizations/BubbleGraph";
 import LanguageGraph from "./visualizations/LanguageGraph";
+import LanguageStreamChart from "./visualizations/LanguageStreamChart";
+import LanguageBubbleStreamChart from "./visualizations/LanguageBubbleStreamChart";
 import UIHandler from "./utils/UIHandler";
 import DataStreamer from "./utils/DataStreamer";
 
@@ -11,7 +13,8 @@ var uiHandler = null;
 $(function () {
     window.WebSocket = window.WebSocket || window.MozWebSocket;
 
-    var baseURL = "http://localhost:9022/"
+    const baseURL = "http://localhost:9022/"
+    const streamURL = "ws://localhost:5001/"
 
     var languageGraph = new LanguageGraph(d3.select("#bar-graph"), 960, 500, baseURL + "files?limit=30");
     languageGraph.initialize();
@@ -23,5 +26,11 @@ $(function () {
     var bubbleGraph = new BubbleGraph(d3.select("#commit-bubbles"), 960, 300, 1, bubbleGraphDataStreamer);
 
     uiHandler = new UIHandler(languageGraph, commitStack, bubbleGraph);
+
+    const languageStreamChart = new LanguageStreamChart("#language-stream-chart", 960, 500, streamURL);
+    languageStreamChart.setup().run();
+
+    const languageBubbleStreamChart = new LanguageBubbleStreamChart("#language-bubble-stream-chart", 800, 800, streamURL);
+    languageBubbleStreamChart.setup().run();
 
 });
