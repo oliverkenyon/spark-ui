@@ -51,6 +51,10 @@ text {
   left: 0;
 }
 
+svg {
+  overflow: visible;
+}
+
 </style>
 
 <body>
@@ -59,13 +63,35 @@ text {
 <script type="text/javascript" src="bower_components/d3-tip/index.js"></script>
 <script type="text/javascript" src="dist/rollup-bundle.js"></script>
 
-<p>Language Graph</p>
-<div id="bar-graph"></div>
+<section>
+  <header>Pull Request Graph</header>
+  <div id="pr-graph"></div>
+</section>
 
-<p>Commit Stack</p>
-<div id="commit-stack"></div>
+<section>
+  <header>Language Graph</header>
+  <div id="bar-graph"></div>
+</section>
 
-<p>Commit Bubbles</p>
-<div id="commit-bubbles"></div>
+<section>
+  <header>Commit Stack</header>
+  <div id="commit-stack"></div>
+</section>
+
+<section>
+  <header>Commit Bubbles</header>
+  <div id="commit-bubbles"></div>
+</section>
+
+<section>
+  <header>Language Streaming Chart</header>
+  <div id="language-stream-chart"></div>
+</section>
+
+<section>
+  <header>Language Bubble Streaming Chart</header>
+  <div id="language-bubble-stream-chart"></div>
+</section>
+
 </body>
 </html>
