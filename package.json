@@ -2,7 +2,7 @@
   "name": "spark",
   "version": "1.0.0",
   "scripts": {
-    "build": "bower --allow-root install && babel src -d lib && npm run rollup",
+    "postinstall": "bower --allow-root install && babel src -d lib && npm run rollup",
     "watch": "watch \"npm run rollup\" src/",
     "rollup": "rollup -c",
     "serve": "http-server .",
