@@ -6,7 +6,7 @@ export default {
   dest: 'dist/rollup-bundle.js',
   plugins: [
     babel({
-      exclude: 'node_modules/**',
+      exclude: ['node_modules/**', 'bower_components/**'],
       presets: 'es2015-rollup'
     })
   ]

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "install": "bower --allow-root install && babel src -d lib && npm run rollup",
-    "watch": "watch \"npm run rollup\" src/",
+    "watch": "watch \"npm run rollup & echo Rollup Done\" src/",
     "rollup": "rollup -c",
     "serve": "http-server .",
     "start": "concurrently \"npm run serve\" \"npm run watch\""
