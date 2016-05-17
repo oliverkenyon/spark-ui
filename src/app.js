@@ -5,6 +5,7 @@ import BubbleGraph from "./visualizations/BubbleGraph";
 import LanguageGraph from "./visualizations/LanguageGraph";
 import LanguageStreamChart from "./visualizations/LanguageStreamChart";
 import LanguageBubbleStreamChart from "./visualizations/LanguageBubbleStreamChart";
+import PRTimeToCLoseChart from "./visualizations/PRTimeToCLoseChart";
 import UIHandler from "./utils/UIHandler";
 import DataStreamer from "./utils/DataStreamer";
 
@@ -32,5 +33,8 @@ $(function () {
 
     const languageBubbleStreamChart = new LanguageBubbleStreamChart("#language-bubble-stream-chart", 800, 800, streamURL);
     languageBubbleStreamChart.setup().run();
+
+    const prTimeToCLoseChart = new PRTimeToCLoseChart("#pr-timetoclose-stream-chart", 960, 500, streamURL);
+    prTimeToCLoseChart.setup().run();
 
 });

@@ -88,7 +88,7 @@ export default class LanguageStreamChart {
       .call(this.yAxis)
       .duration(200)
 
-    var selection =  this.langChart.selectAll(".bar")
+    const selection =  this.langChart.selectAll(".bar")
        .data(data, d=>d.language);
 
     // Add new bars
