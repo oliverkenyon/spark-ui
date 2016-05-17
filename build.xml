@@ -19,6 +19,7 @@
  
     <exec executable="npm" osfamily="unix">
 		<arg value="install"/>
+		<arg value="--unsafe-perm"/> <!-- Needed for agent running in docker to allow npm to run as root -->
 	</exec>
 	 <exec executable="cmd" osfamily="windows">
 		<arg value="/c"/>
