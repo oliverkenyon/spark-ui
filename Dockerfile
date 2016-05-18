@@ -12,8 +12,8 @@ COPY src/ /app/src/
 COPY index.html /app/
 
 WORKDIR /app
-RUN npm set progress=false; npm install; npm run build
-RUN npm install http-server
+RUN npm set progress=false; npm install --unsafe-perm
+RUN npm install --unsafe-perm http-server
 RUN rm -rf src/
 
 ENTRYPOINT ["./node_modules/http-server/bin/http-server", "."]
